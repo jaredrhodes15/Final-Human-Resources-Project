@@ -23,47 +23,47 @@
         this.$todoData = [
         {
             'id': '1',
-            'text': 'Fivamus sagittis lacus vel',
+            'text': 'Process Documents',
             'done': false
         },
         {
             'id': '2',
-            'text': 'Nullam dolor nibh ultricies',
+            'text': 'Push Codes',
             'done': true
         },
         {
             'id': '3',
-            'text': 'Cras mattis consectetur purus',
+            'text': 'Eat',
             'done': true
         },
         {
             'id': '4',
-            'text': 'Integer posuere erat ante',
+            'text': 'Team Meeting',
             'done': true
         },
         {
             'id': '5',
-            'text': 'Praesent commodo cursus magnavel',
+            'text': 'Team Building',
             'done': false
         },
         {
             'id': '6',
-            'text': 'Cras mattis consectetur',
+            'text': 'Monthly Cost Projection',
             'done': true
         },
         {
             'id': '7',
-            'text': 'Fivamus sagittis lacus vel',
+            'text': 'Daily Nap',
             'done': true
         },
         {
             'id': '8',
-            'text': 'Nullam dolor nibh ultricies',
+            'text': 'Order Supply',
             'done': true
         },
         {
             'id': '9',
-            'text': 'Nullam dolor nibh ultricies',
+            'text': 'Schedule time off',
             'done': true
         }];
 
