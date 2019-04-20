@@ -1,8 +1,4 @@
-/**
-* Theme: Notika Template
-* Author: Kalam
-* Chat application 
-*/
+
 
 !function($) {
     "use strict";

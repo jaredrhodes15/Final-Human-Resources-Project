@@ -1,24 +1,4 @@
-/*
- * Flot plugin to order bars side by side.
- * 
- * Released under the MIT license by Benjamin BUFFET, 20-Sep-2010.
- *
- * This plugin is an alpha version.
- *
- * To activate the plugin you must specify the parameter "order" for the specific serie :
- *
- *  $.plot($("#placeholder"), [{ data: [ ... ], bars :{ order = null or integer }])
- *
- * If 2 series have the same order param, they are ordered by the position in the array;
- *
- * The plugin adjust the point by adding a value depanding of the barwidth
- * Exemple for 3 series (barwidth : 0.1) :
- *
- *          first bar décalage : -0.15
- *          second bar décalage : -0.05
- *          third bar décalage : 0.05
- *
- */
+
 
 (function($){
     function init(plot){
