@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import swal from 'sweetalert';
+//import swal from 'sweetalert';
 
 class App extends Component {
 
@@ -11,9 +11,9 @@ class App extends Component {
     this.state = {
       employeeList: [
         {
-          firstName: "Jeffery",
-          lastName: "Jones",
-          email: "Jones.Jeffery@gmail.com",
+          firstName: "Peter",
+          lastName: "Griffin",
+          email: "Peter.Griffin@familyguy.com",
           salary: "50,000",
           joinDate: "3/8/2018"
 
@@ -47,15 +47,26 @@ class App extends Component {
 
   //Event Functions
 
+  // login() {
+  //   const email = document.getElementById(`email`).value;
+  //   const password = document.getElementById('password').value;
+  //   email === "admin@admin.com" && password === "password" ? this.setState({
+  //     user: {
+  //       email: email,
+  //       password: password
+  //     }
+  //   }) : swal("Access Deneid", "Please Enter Correct Email And Password");
+  // }
+
   login() {
     const email = document.getElementById(`email`).value;
     const password = document.getElementById('password').value;
     email === "admin@admin.com" && password === "password" ? this.setState({
-      user: {
-        email: email,
-        password: password
-      }
-    }) : swal("Access Deneid", "Please Enter Correct Email And Password");
+          user: {
+            email: email,
+            password: password
+          }
+        }) : alert("wrong");
   }
 
   addEmployee() {
