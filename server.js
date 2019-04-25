@@ -9,7 +9,8 @@ const routes = require("./routes");
 var PORT = 3000;
 
 var app = express();
-
+console.log("asdf")
+console.log("aaaaa")
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
