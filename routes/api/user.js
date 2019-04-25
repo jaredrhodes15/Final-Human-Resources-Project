@@ -1,19 +1,36 @@
+const express = require("express");
 const router = require("express").Router();
 const addUser = require("../../controllers/UserController");
 
-router.route("/")
-    .findAll(addUser.findAll);
+const app = express();
 
-router.route("/api/create")
-    .createUser(addUser.createUser);
+app.route("/")
+    .get(function (req, res) {
+        res.send(addUser.findAll);
+    });
 
-router.route("/api/:id")
-    .findById(addUser.findById)
 
-router.route("/api/update")
-    .updateUser(addUser.updateUser);
+app.route("/api/create")
+    .post(function(req, res) {
+        res.send(addUser.createUser);
+    });
 
-routere.route("/api/delete")
-    .deleteUser(addUser.deleteUser);
+app.route("/api/:id")
+    .get(function (req, res) {
+        res.send(addUser.findById);
+    });
 
-module.exports = router;
+
+app.route("/api/update")
+    .put(function (req, res) {
+        res.send(addUser.updateUser);
+    })
+
+
+app.route("/api/delete")
+    .delete(function (req, res) {
+        res.send(addUser.deleteUser);
+    })
+
+
+module.exports = app;
