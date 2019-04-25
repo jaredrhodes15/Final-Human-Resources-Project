@@ -29,6 +29,6 @@
     "not op_mini all"
   ]
   "scripts": {
-    "firstscoop": "nodenv firstscoop.js"
-  },
+    "multipack": "nodenv multipack.js"
+},
 }
