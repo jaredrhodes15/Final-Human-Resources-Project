@@ -2,18 +2,18 @@ const router = require("express").Router();
 const addUser = require("../../controllers/UserController");
 
 router.route("/")
-    .get(addUser.findAll);
+    .findAll(addUser.findAll);
 
 router.route("/api/create")
-    .post(addUser.createUser);
+    .createUser(addUser.createUser);
 
 router.route("/api/:id")
-    .get(addUser.findById)
+    .findById(addUser.findById)
 
 router.route("/api/update")
-    .put(addUser.updateUser);
+    .updateUser(addUser.updateUser);
 
 routere.route("/api/delete")
-    .delete(addUser.deleteUser);
+    .deleteUser(addUser.deleteUser);
 
 module.exports = router;
