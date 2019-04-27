@@ -179,7 +179,7 @@ class App extends Component {
     return (
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Welcome To Employee Management System</h1>
+        <h1 className="App-title">Welcome</h1>
       </header>
     )
   }

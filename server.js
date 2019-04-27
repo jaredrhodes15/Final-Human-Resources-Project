@@ -13,20 +13,11 @@ console.log("asdf")
 console.log("aaaaa")
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
-
-console.log("working");
-console.log("working");
-console.log("working");
-console.log("working");
-console.log("working");
-console.log("working");
-console.log("working");
-
+// app.use(express.static('public'));
 
 app.use(routes);
 
-mongoose.connect("mongodb://localhost/Final-Project", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/companyDB", { useNewUrlParser: true });
 
 app.listen(PORT, function () {
     console.log("App is running on " + PORT + "!");
