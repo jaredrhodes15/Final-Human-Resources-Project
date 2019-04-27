@@ -1,36 +1,24 @@
-const express = require("express");
+// const express = require("express");
 const router = require("express").Router();
 const addUser = require("../../controllers/UserController");
 
-const app = express();
+// const app = express();
 
-app.route("/")
-    .get(function (req, res) {
-        res.send(addUser.findAll);
-    });
+router.route("/")
+    .get(addUser.findAll);
 
 
-app.route("/api/create")
-    .post(function(req, res) {
-        res.send(addUser.createUser);
-    });
+router.route("/create")
+    .post(addUser.createUser);
 
-app.route("/api/:id")
-    .get(function (req, res) {
-        res.send(addUser.findById);
-    });
+router.route("/api/:id")
+    .get(addUser.findById);
 
 
-app.route("/api/update")
-    .put(function (req, res) {
-        res.send(addUser.updateUser);
-    })
+router.route("/api/update")
+    .put(addUser.updateUser);
 
+router.route("/api/delete")
+    .delete(addUser.deleteUser);
 
-app.route("/api/delete")
-    .delete(function (req, res) {
-        res.send(addUser.deleteUser);
-    })
-
-
-module.exports = app;
+module.exports = router;
