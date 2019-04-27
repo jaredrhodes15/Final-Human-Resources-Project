@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 //import swal from 'sweetalert';
+
 
 class App extends Component {
 
   constructor() {
-
+   
     super();
     this.state = {
       employeeList: [
@@ -16,6 +18,7 @@ class App extends Component {
           email: "Peter.Griffin@familyguy.com",
           salary: "50,000",
           joinDate: "3/8/2018"
+          
 
         },
         {
@@ -44,7 +47,7 @@ class App extends Component {
     this.updateSalary = this.updateSalary.bind(this)
 
   }
-
+  
   //Event Functions
 
   // login() {
@@ -104,6 +107,14 @@ class App extends Component {
       addEmployee: false,
     })
   }
+
+  // link(index) {
+  //   this.setState(
+  //     {
+  //       editIndex: index
+  //     }
+  //   )
+  // }
 
   logOut() {
     this.setState({
@@ -206,6 +217,8 @@ class App extends Component {
   rendertoDoList() {
     return (
 
+  
+
       <div className="renderTodoList">
         <h1 className="todoHeader">Employee List</h1>
         <div className="employeeList">
@@ -220,6 +233,7 @@ class App extends Component {
                 <th scope="col" className="centerAll">Join Date</th>
                 <th scope="col" className="centerAll">Edit</th>
                 <th scope="col" className="centerAll">Delete</th>
+                <th scope="col" className="centerAll">Link</th>
               </tr>
             </thead>
             <tbody>
@@ -238,6 +252,10 @@ class App extends Component {
                     <td className="centerAll" id={index + 8}><button onClick={() => {
                       this.deleteEmployee(index)
                     }} className="btn btn-danger">Delete</button></td>
+                    <td className="centerAll" id={index + 9}><button onClick={() => {
+                      // this.link(index)
+                    }} className="btn btn-primary mb1 bg-navy" href="./dashboard/index.html">DashBoard Link</button></td>
+                        {/* <button onClick={() => { this.() }}>Click Here</button> */}
                   </tr>
                     : <tr>
                       <th scope="row" id={index + 1}>{index + 1}</th>
@@ -308,6 +326,17 @@ class App extends Component {
     )
   }
 
+  // renderLink() {
+  //   return (
+  //     <div className="Link">
+  //       <button className="btn btn-warning" onClick={() => {
+  //         this.link();
+  //       }}>Link</button>
+  //     </div>
+  //   )
+  // }
+
+
   render() {
     return (
 
@@ -317,11 +346,11 @@ class App extends Component {
         {this.state.user && !this.state.addEmployee && this.rendertoDoList()}
         {this.state.addEmployee && this.renderAddEmployee()}
         {this.state.user && !this.state.addEmployee && this.renderLogOut()}
-
-
+        {/* {this.state.link && !this.renderLink()} */}
       </div>
     );
   }
+  
 }
 
 export default App;
