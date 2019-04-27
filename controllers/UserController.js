@@ -23,14 +23,19 @@ module.exports = {
     },
 
     createUser: function (req, res) {
-
-        db.User.create({ id: req.body.id }, function (err, users) {
+        console.log(req.body)
+        db.User.create({ 
+            // id: req.body.id, 
+            name: req.body.name, 
+            position: req.body.position, 
+            adminPrivileges: req.body.privileges 
+        }, function (err, users) {
             if (!err) {
                 console.log("Recieved post");
                 res.json(users);
             } else {
                 console.error(err);
-                res.json(err, "Post didn't work.");
+                res.status(400).json(err);
             }
         });
         
