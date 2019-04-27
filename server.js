@@ -14,15 +14,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-console.log("working");
-console.log("working");
-console.log("working");
-console.log("working");
-console.log("working");
-console.log("working");
-console.log("working");
-
-
 app.use(routes);
 
 mongoose.connect("mongodb://localhost/Final-Project", { useNewUrlParser: true });
